@@ -1,0 +1,41 @@
+
+
+      <div class="container">
+         
+          <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">S & P 500 Table</h3>
+              </div>
+              <table class="table table-hover" id="dev-table" >
+                <thead>
+                  <tr>
+                      <th>Date</th>
+                      <th>Open</th>
+                      <th>High</th>
+                      <th>Low</th>
+                      <th>Close</th>
+                      <th>Adj Close</th>
+                      <th>Volume</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let sandp500 of sandp500Table">
+                  <tr>
+                    <td>{{sandp500.Date}}</td>
+                    <td>{{sandp500.Open}}</td>
+                    <td>{{sandp500.High}}</td>
+                    <td>{{sandp500.Low}}</td>
+                    <td>{{sandp500.Close}}</td>
+                    <td>{{sandp500["Adj Close"]}}</td>
+                    <td>{{sandp500.Volume}}</td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+

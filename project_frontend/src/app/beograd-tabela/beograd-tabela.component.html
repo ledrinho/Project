@@ -1,0 +1,41 @@
+
+
+      <div class="container">
+
+          <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Beograd Table</h3>
+              </div>
+              <table class="table table-hover" id="dev-table" >
+                <thead>
+                  <tr>
+                      <th>Datum trgovanja</th>
+                      <th>Vrednost</th>
+                      <th>% Promena</th>
+                      <th>Open</th>
+                      <th>Max</th>
+                      <th>Min</th>
+                      <th>Promet</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let bgModel of beogradTable">
+                  <tr>
+                    <td>{{bgModel["Datum_Trgovanja"]}}</td>
+                    <td>{{bgModel.Vrednost}}</td>
+                    <td>{{bgModel["Promena"]}}</td>
+                    <td>{{bgModel.Open}}</td>
+                    <td>{{bgModel.Max}}</td>
+                    <td>{{bgModel.Min}}</td>
+                    <td>{{bgModel.Promet}}</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+

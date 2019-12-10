@@ -1,0 +1,120 @@
+<div class="container">
+    <table>
+        <tr>
+            <th>Ime</th>
+            <th>Izaberi Fajl</th>
+            <th>Upload</th>
+
+        </tr>
+        <tr>
+            <th>Zagrebacka Berza</th>
+            <th><input  #fileInput type="file" (change)="readJsonForZagreb($event)"></th>
+            <th><button class="btn btn-warning"(click)="uploadZagreb()">Upload</button></th>
+        </tr>
+        <tr>
+            <th>S and P 500</th>
+            <th><input  #fileInput1 type="file" (change)="readJsonForSandP500($event)"></th>
+            <th><button class="btn btn-warning" (click)="uploadSandP500()">Upload</button></th>
+        </tr>
+        <tr>
+                <th>Beogradska Berza</th>
+                <th><input  #fileInput1 type="file" (change)="readJsonForBeograd($event)"></th>
+                <th><button class="btn btn-warning"(click)="uploadBeograd()">Upload</button></th>
+            </tr>
+
+    </table>
+
+    <button class="btn btn-warning"(click)="show()">Show</button>
+
+    <table class="table table-hover" *ngIf="show1">
+  <thead>
+    <tr>
+      <th scope="col">PRAVILA</th>
+      <th scope="col">Opis pravila</th>
+      <th scope="col">BELEX Vjerovatnoca</th>
+      <th scope="col">CROBEX Vjerovatnoca</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-active">
+      <th scope="row">Pravilo 1</th>
+      <td>Ako je S&P500 rasla 3 dana zaredom po cijeni zatvaranja kako su se ponasale BELEX I CROBEX</td>
+      <td>{{vjerovatnoca1[0]}}</td>
+      <td>{{vjerovatnoca1[1]}}</td>
+    </tr>
+
+     <tr class="table-active">
+      <th scope="row">Pravilo 2</th>
+      <td>Ako je S&P500 rasla 3 dana zaredom po obimu trgovine kako su se ponasale BELEX I CROBEX</td>
+     <td>{{vjerovatnoca2[0]}}</td>
+      <td>{{vjerovatnoca2[1]}}</td>
+    </tr>
+
+     <tr class="table-active">
+      <th scope="row">Pravilo 3</th>
+      <td>Ako je S&P500 opadala 3 dana zaredom po cijeni zatvaranja kako su se ponasale BELEX I CROBEX</td>
+      <td>{{vjerovatnoca3[0]}}</td>
+      <td>{{vjerovatnoca3[1]}}</td>
+    </tr>
+
+     <tr class="table-active">
+      <th scope="row">Pravilo 4</th>
+      <td>Ako je S&P500 opadala 3 dana zaredom po obimu trgovine kako su se ponasale BELEX I CROBEX</td>
+      <td>{{vjerovatnoca4[0]}}</td>
+      <td>{{vjerovatnoca4[1]}}</td>
+      <!--<td> <div style="border-radius: 50%;background-color: green"></div></td>-->
+    </tr>
+
+    <tr class="table-active">
+      <th scope="row">Pravilo 5</th>
+      <td>RSI(Oversold)</td>
+      <td>{{vjerovatnoca5[0]}}</td>
+      <td>{{vjerovatnoca5[1]}}</td>
+      <!--<td> <div style="border-radius: 50%;background-color: green"></div></td>-->
+    </tr>
+
+    <tr class="table-active">
+      <th scope="row">Pravilo 6</th>
+      <td>RSIOverbought</td>
+      <td>{{vjerovatnoca6[0]}}</td>
+      <td>{{vjerovatnoca6[1]}}</td>
+      <!--<td> <div style="border-radius: 50%;background-color: green"></div></td>-->
+    </tr>
+
+    <tr class="table-active">
+      <th scope="row">Pravilo 7</th>
+      <td>SMA cijena zatvaranja(kupovati)</td>
+      <td>{{vjerovatnoca7[0]}}</td>
+      <td>{{vjerovatnoca7[1]}}</td>
+      <!--<td> <div style="border-radius: 50%;background-color: green"></div></td>-->
+    </tr>
+
+    <tr class="table-active">
+      <th scope="row">Pravilo 8</th>
+      <td>SMA cijena zatvaranja(ne kupovati)</td>
+      <td>{{vjerovatnoca7[2]}}</td>
+      <td>{{vjerovatnoca7[3]}}</td>
+      <!--<td> <div style="border-radius: 50%;background-color: green"></div></td>-->
+    </tr>
+
+    <tr class="table-active">
+      <th scope="row">Pravilo 9</th>
+      <td>SMA promet(kupovati)</td>
+      <td>{{vjerovatnoca8[0]}}</td>
+      <td>{{vjerovatnoca8[1]}}</td>
+      <!--<td> <div style="border-radius: 50%;background-color: green"></div></td>-->
+    </tr>
+
+    <tr class="table-active">
+      <th scope="row">Pravilo 10</th>
+      <td>SMA promet(ne kupovati)</td>
+      <td>{{vjerovatnoca8[2]}}</td>
+      <td>{{vjerovatnoca8[3]}}</td>
+      <!--<td> <div style="border-radius: 50%;background-color: green"></div></td>-->
+    </tr>
+  </tbody>
+    </table>
+
+
+</div>

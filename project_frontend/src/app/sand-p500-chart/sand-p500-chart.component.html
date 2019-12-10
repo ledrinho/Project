@@ -1,0 +1,23 @@
+<html>
+  <head>
+
+  </head>
+
+  <body >
+
+  <div class="col-md-12">
+    <div *ngIf="chart" class="col-md-12">
+      <canvas macd #macd id="macd" (onclick)="chartClicked($event)">{{ macd }}</canvas>
+    </div>
+
+    <div *ngIf="chart" class="col-md-12">
+      <canvas canvas #canvas id="canvas" (onclick)="chartClicked($event)">{{ canvas }}</canvas>
+    </div>
+  </div>
+    <div *ngIf="chart" class="col-md-12" >
+      <canvas rsi #rsi id="rsi" (onclick)="chartClicked($event)">{{ rsi }}</canvas>
+    </div>
+
+  </body>
+
+</html>

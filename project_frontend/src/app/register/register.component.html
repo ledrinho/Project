@@ -1,0 +1,55 @@
+
+<div class="container">
+  <div class= "col-md-4">
+  <form [formGroup]="registerForm">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Ime</label>
+      <input  class="form-control" type="text" formControlName= "ime" required>
+    </div>
+
+    <div>
+      <label for="exampleInputEmail1">Prezime</label>
+      <input class="form-control" type="text" formControlName= "prezime" required>
+    </div>
+
+    <div>
+      <label for="exampleInputEmail1">Email</label>
+      <input class="form-control" type="email" formControlName= "email" required>
+    </div>
+
+    <div>
+      <label for="exampleInputEmail1">Datum rodjenja</label>
+      <input class="form-control" type="date" formControlName= "datumRodjenja" required>
+    </div>
+
+    <div>
+      <label for="exampleInputEmail1">Adresa</label>
+      <input class="form-control" type="text" formControlName= "adresa" required>
+    </div>
+
+    <div>
+      <label for="exampleInputEmail1">Grad</label>
+      <input  class="form-control" type="text" formControlName= "grad" required>
+    </div>
+
+    <div>
+      <label for="exampleInputEmail1">Sifra</label>
+      <input class="form-control" type="password" formControlName= "sifra" required>
+    </div>
+
+    <div>
+      <label for="exampleInputEmail1">Potvrdi Sifru</label>
+      <input class="form-control" type="password" formControlName= "potvrdiSifru" required>
+    </div>
+    <div>
+      <label>Pozicija</label>
+      <select formControlName="pozicija" required>
+        <option value="admin">Admin</option>
+        <option value="supervisor">Supervisor</option>
+        <option value="trajder">Trejder</option>
+      </select>
+    </div>
+  </form>
+  <button class="btn btn-success" (click)="registrujSe()">Registruje se</button>
+</div>
+</div>
